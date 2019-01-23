@@ -1,0 +1,40 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.elasticfurkan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+
+    compile group: 'org.springframework.data', name: 'spring-data-elasticsearch', version: '3.0.0.RELEASE'
+    compile group: 'org.elasticsearch.client', name: 'transport', version: '5.5.0'
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    
+
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.7.2'
+    compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
