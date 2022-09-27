@@ -16,4 +16,4 @@ This is the repository for the examples of using Elaticsearch covered in the blo
     compile group: 'org.elasticsearch.client', name: 'transport', version: '5.5.0'
 
 ## More Information
- [furkanbrgl](https://furkanbrgl.com)
+ [furkanbrgl](https://furkanbirgul.com)
